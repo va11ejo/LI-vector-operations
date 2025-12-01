@@ -1,5 +1,4 @@
-/*!
-\page menu_page Página do Menu de Operações
+\page menu_page "Página do Menu de Operações"
 
 # Página do Menu de Operações
 
@@ -29,8 +28,8 @@ até o utilizador escolher a opção `0` (terminar o programa).
    Cria um novo vetor apenas com os elementos cujo resto da divisão por 3
    é diferente de zero.
 
-5. **Construção de uma matriz 2×10 com o quádruplo dos valores**  
-   Gera uma matriz 2×10 em que a primeira linha é o vetor inicial e a
+5. **Construção de uma matriz 2x10 com o quádruplo dos valores**  
+   Gera uma matriz 2x10 em que a primeira linha é o vetor inicial e a
    segunda linha contém os mesmos valores multiplicados por 4.
 
 6. **Cálculo da média do vetor**  
@@ -48,17 +47,13 @@ até o utilizador escolher a opção `0` (terminar o programa).
    Identifica e apresenta todos os números compostos (não primos) que
    existem no vetor inicial.
 
-10. **Matriz 10×10 do produto entre o vetor inicial e o mesmo vetor ordenado por ordem crescente**  
-    Gera uma matriz 10×10 em que cada linha corresponde a um elemento do
+10. **Matriz 10x10 do produto entre o vetor inicial e o mesmo vetor ordenado por ordem crescente**  
+    Gera uma matriz 10x10 em que cada linha corresponde a um elemento do
     vetor inicial multiplicado por todos os elementos do vetor ordenado.
 
-11. **Matriz 10×10 transposta (da matriz de produtos)**  
+11. **Matriz 10x10 transposta (da matriz de produtos)**  
     Calcula e apresenta a matriz transposta da matriz produzida na
     opção 10.
 
 0. **Terminar o programa**  
    Encerra a execução do programa.
-
----
-
-*/
