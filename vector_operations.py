@@ -35,7 +35,6 @@ def menu(numbers):
     print('5 - Construção de uma matriz 2x10 com o quádruplo dos valores')
     print('6 - Cálculo da média do vetor')
 
-    # 1 - Leitura de um novo vetor, cálculo e devolução da soma do primeiro vetor com o dobro do segundo;
     print('7 - Ajuda adicional')
     print('8 - Leitura de um novo vetor e soma com o dobro dos seus valores ao vetor inicial')
     print('9 - Números compostos no vetor inicial')
@@ -65,7 +64,6 @@ def get_numbers_from_user(mensagem_inicial=None):
     max_vector_size = 10
     numbers = []
 
-    # Mensagem opcional (diferente para vetor inicial / novo vetor)
     if mensagem_inicial is not None:
         print("\n" + mensagem_inicial)
         print(f"Vamos ler {max_vector_size} números inteiros "
@@ -100,7 +98,7 @@ def get_numbers_from_user(mensagem_inicial=None):
 # @return O valor do vetor cuja distância ao alvo é mínima.
 
 def valor_mais_proximo(numbers, target=15):
-    menor_diferenca = float('inf') # cria um valor que representa infinito positivo em Python
+    menor_diferenca = float('inf')
     valor_mais_proximo = None
 
     for number in numbers:
@@ -110,9 +108,6 @@ def valor_mais_proximo(numbers, target=15):
             valor_mais_proximo = number
     
     return valor_mais_proximo
-
-    # forma mais simplificada de fazer isso
-    #return min(numbers, key=lambda number: abs(number-target))
 
 ##
 # @brief Calcula o cosseno dos valores presentes na segunda metade do vetor.
@@ -125,13 +120,10 @@ def valor_mais_proximo(numbers, target=15):
 # @return Um vetor contendo os valores do cosseno da segunda metade do vetor inicial.
 
 def cosseno_segunda_metade(numbers):
-    # Calcular o index da segunda metade
     metade_index = len(numbers) // 2
 
-    # Criar um array dos numeros da segunda metade
     segunda_metade_vector = numbers[metade_index:]
 
-    # calcular o cosseno de cada elemento da segunda metade do array
     return [math.cos(number) for number in segunda_metade_vector]
 
 ##
@@ -158,14 +150,6 @@ def ordernar_vector(numbers):
 # @return Um novo vetor contendo apenas os valores que não são divisíveis por três.
 
 def nao_divisiveis_por_tres(numbers):
-    # results = []
-
-    # for number in numbers:
-    #     if number % 3 != 0:
-    #         results.append(number)
-    # return results
-
-    # podes fazer de outra forma:
     return [number for number in numbers if number % 3 != 0]
 
 ##
@@ -184,8 +168,6 @@ def matriz_2x10_quadruplo(numbers):
     for i in range(2):
         result.append([])
         for f in range(10):
-
-            # result[i].append(numbers[f] if i == 0 else numbers[f] * 4)
             if i == 0:
                 result[i].append(numbers[f])
             else:
@@ -257,16 +239,15 @@ def soma_primeiro_com_dobro_segundo(numbers):
 # @return True se o número for composto; False caso contrário.
 
 def check_composto(number):
-    # Números menores que 2 não são compostos
     if number < 2:
         return False
 
     # Verificar se o número tem algum divisor além de 1 e dele próprio
     for i in range(2, int(number ** 0.5) + 1):
         if number % i == 0:
-            return True  # Encontrou divisor → é composto
+            return True
 
-    return False  # Não encontrou nenhum divisor → é primo
+    return False
 
 ##
 # @brief Devolve todos os números compostos presentes no vetor.
